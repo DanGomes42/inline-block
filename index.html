@@ -19,6 +19,12 @@
 </head>
 <body>
   <main>
+    <div class="container">
+      <h1>
+        Display
+      </h1>
+    </div>
+    
     <section id="grid">
       <div class="container">
         <h2>Grid Layout</h2>
@@ -35,12 +41,12 @@
       <div class="container">
         <div class="layout">
           <div class="wrapper">
-            <div class="box">1</div>
-            <div class="box">2</div>
-            <div class="box">3</div>
-            <div class="box">4</div>
-            <div class="box">5</div>
-            <div class="box">6</div>
+            <div class="box blue">1</div>
+            <div class="box blue">2</div>
+            <div class="box blue">3</div>
+            <div class="box blue">4</div>
+            <div class="box blue">5</div>
+            <div class="box blue">6</div>
           </div>
         </div>
       </div>
@@ -66,20 +72,110 @@
       <div class="container">
         <div class="layout">
           <div class="wrapper">
-            <div class="box">1</div>
-            <div class="box">2</div>
-            <div class="box">3</div>
-            <div class="box">4</div>
-            <div class="box">5</div>
-            <div class="box">6</div>
-            <div class="box">7</div>
-            <div class="box">8</div>
-            <div class="box">9</div>
+            <div class="box blue">1</div>
+            <div class="box blue">2</div>
+            <div class="box blue">3</div>
+            <div class="box blue">4</div>
+            <div class="box blue">5</div>
+            <div class="box blue">6</div>
+            <div class="box blue">7</div>
+            <div class="box blue">8</div>
+            <div class="box blue">9</div>
           </div>
         </div>
       </div>
     </section>
 
+    <div class="container">
+      <h1>
+        Position
+      </h1>
+    </div>
+
+    <section id="relative">
+      <div class="container">
+        <h2>Position Relative</h2>
+        <div class="divider"></div>
+        
+  <pre><code class="css">.box {
+  position: relative;
+  display: block;
+}</code></pre>
+      </div>
+      
+      <div class="container">
+        <div class="layout">
+          <div class="wrapper">
+            <div class="box blue">1</div>
+            <div class="box rose">2</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="absolute">
+      <div class="container">
+        <h2>Position Absolute</h2>
+        <div class="divider"></div>
+        
+  <pre><code class="css">.wrapper {
+  position: relative;
+}
+
+.box:nth-child(1) {
+  position: relative;
+  height: 110px;
+}
+
+.box:nth-child(2) {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  left: 140px;
+}</code></pre>
+      </div>
+      
+      <div class="container">
+        <div class="layout">
+          <div class="wrapper">
+            <div class="box blue">1</div>
+            <div class="box rose">2</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="sticky">
+      <div class="container">
+        <h2>Position Sticky</h2>
+        <div class="divider"></div>
+        
+  <pre><code class="css">.wrapper {
+  position: relative;
+}
+
+.box:nth-child(1) {
+  position: sticky;
+  top: 8px;
+  left: 140px;
+  z-index: 2;
+}
+
+.box:nth-child(2) {
+  position: relative;
+  height: 710px;
+}</code></pre>
+      </div>
+      
+      <div class="container">
+        <div class="layout">
+          <div class="wrapper">
+            <div class="box rose">1</div>
+            <div class="box blue">2</div>
+          </div>
+        </div>
+      </div>
+    </section>
   </main>
 
 </body>

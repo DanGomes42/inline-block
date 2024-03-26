@@ -21,6 +21,19 @@ h2 {
   font-size: 1.5rem;
 }
 
+
+.blue {
+  --bg-color: #0891b2;
+}
+
+.red {
+  --bg-color: #ef4444;
+}
+
+.rose {
+  --bg-color: #f43f5e;
+}
+
 .divider {
   width: 100%;
   height: 2px;
@@ -42,10 +55,12 @@ section {
   border-radius: 8px;
   border: 1px solid #e2e2e2;
   padding: 12px;
+  max-height: 400px;
+  overflow: auto;
 }
 
 .box {
-  background-color: #0891b2;
+  background-color: var(--bg-color);
   color: #fff;
   font-size: 1.5rem;
   padding: 18px;
@@ -68,4 +83,40 @@ section {
 #flex .box {
   flex: 1;
   min-width: 250px;
+}
+
+#relative .box {
+  position: relative;
+}
+
+#absolute .wrapper {
+  position: relative;
+}
+
+#absolute .box:nth-child(1) {
+  position: relative;
+  height: 110px;
+}
+
+#absolute .box:nth-child(2) {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  left: 140px;
+}
+
+#sticky .wrapper {
+  position: relative;
+}
+
+#sticky .box:nth-child(1) {
+  position: sticky;
+  top: 8px;
+  left: 140px;
+  z-index: 2;
+}
+
+#sticky .box:nth-child(2) {
+  position: relative;
+  height: 710px;
 }
